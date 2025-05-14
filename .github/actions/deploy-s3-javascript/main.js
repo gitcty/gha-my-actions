@@ -9,7 +9,7 @@ function run() {
     const distfolder = core.getInput('dist-folder', {required: true});
 
     // 2) Upload files
-    const s3URI = `s3:\\${s3bucket}`;
+    const s3URI = `s3://${s3bucket}`;
 
     exec.exec(`aws s3 sync ${distfolder} ${s3URI} --region ${region}`);
 
