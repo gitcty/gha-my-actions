@@ -70,7 +70,7 @@ jobs:
         with:
           s3bucket: gitcty-gha-actions-training-bkt
           region: 'us-east-2'
-          dist-files: ./dist
+          dist-folder: ./dist
   information:
     runs-on: ubuntu-latest
     steps:
