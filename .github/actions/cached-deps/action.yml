@@ -8,6 +8,10 @@ inputs:
 runs: 
   using: 'composite'
   steps:
+  - name: echo Caching Status
+    if: inputs.caching != 'true'
+    run: echo 'Caching is turned off'
+    shell: bash
   - name: Cache dependencies
     if: inputs.caching.value == 'true'
     id: cache
