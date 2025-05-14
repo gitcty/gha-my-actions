@@ -78,3 +78,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Run js action
         uses: ./.github/actions/deploy-s3-javascript
+      - name: Output URL Information
+        run: |
+            echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
